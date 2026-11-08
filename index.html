@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" style="--era-color: #d6ff62; --lime: #d6ff62; --bg: #101211; --panel: #1a1d1a; --line: #343a31; --control: #242922; --notice-bg: #28331b; --notice-ink: #f2f4ea; --primary-ink: #101211;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liner Notes — A Songwriter's Life</title>
+<meta name="description" content="Live your own songwriter story. Create eras, negotiate contracts and decide who you become.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23d6ff62'/%3E%3Ctext x='9' y='30' font-size='28'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#101211;--panel:#1a1d1a;--line:#343a31;--muted:#a8afa2;--ink:#f2f4ea;--lime:#d6ff62}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button,input,select,textarea{border:1px solid var(--line);border-radius:9px;background:var(--control,#242922);color:var(--ink);padding:12px}
+button:hover{border-color:var(--lime)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button.primary{background:var(--lime);color:var(--primary-ink,#17200b);font-weight:750;border-color:var(--lime)}
+button.ghost{background:transparent}
+input,select,textarea{width:100%;margin:6px 0 16px}
+textarea{min-height:95px}
+label{font-size:14px;color:var(--muted)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-3px}
+h2{font-size:28px;letter-spacing:-1px}
+h3{font-size:18px}
+small,.muted{color:var(--muted)}
+small{font-size:13px}
+.shell{max-width:1400px;margin:auto;padding:24px 32px}
+.top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px;gap:15px}
+.brand{font-weight:850;font-size:22px;letter-spacing:-1px}
+.brand span{color:var(--lime)}
+.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;color:var(--lime);font-weight:700}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:38px;padding-top:30px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:23px;margin-bottom:18px}
+.stat{margin:16px 0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar{height:5px;background:#353c30;margin-top:8px;border-radius:4px;overflow:hidden}
+.bar i{display:block;background:var(--lime);height:100%}
+.statsgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.number{font-size:25px;font-weight:700}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
+.tabs button{padding:9px 16px;border-radius:30px;background:transparent}
+.tabs button.active{background:var(--lime);color:var(--primary-ink,#151815)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.choice{display:block;text-align:left;width:100%;margin-top:10px;padding:17px}
+.choice strong,.choice small{display:block}
+.choice small{margin-top:4px}
+.event{border-left:3px solid var(--lime)}
+.entry{padding:15px 0;border-bottom:1px solid var(--line)}
+.entry p{margin:4px 0}
+.pill{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:30px;display:inline-block}
+.notice{background:var(--notice-bg,#28331b);padding:15px;border-radius:9px;margin-bottom:18px;color:var(--notice-ink,#dff8ab)}
+.cover{aspect-ratio:1;background:linear-gradient(130deg,var(--c),#111 85%);padding:20px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #ffffff22;overflow:hidden}
+.cover b{font-size:28px;line-height:1.1;overflow-wrap:anywhere}
+.album{display:grid;grid-template-columns:140px 1fr;gap:20px}
+.track{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.track span{flex:1}
+.track button{padding:5px 10px}
+.setup{max-width:900px;margin:35px auto}
+.setup .grid{gap:30px}
+.intro{padding:30px 0}
+.big{font-size:22px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+dialog{width:min(550px,92vw);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:15px;padding:28px}
+dialog::backdrop{background:#000a}
+.tag{color:var(--lime)}
+@media(max-width:780px){
+.shell{padding:18px}
+.layout{grid-template-columns:1fr;gap:10px}
+aside .card{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+aside h3,aside .statsgrid{grid-column:1/-1}
+.stat{margin:8px 0}
+.grid,.setup .grid{grid-template-columns:1fr}
+.top{align-items:flex-start}
+.album{grid-template-columns:100px 1fr}
+.cover b{font-size:21px}
+h1{letter-spacing:-2px}
+.tabs{gap:5px}
+.tabs button{font-size:14px;padding:8px 12px}
+}
+.checkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px}
+.check{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:10px;color:var(--ink);font-size:14px}
+.check input{width:auto;margin:0;accent-color:var(--lime)}
+.compact{padding:8px 12px}
+.track input[type=text]{margin:0;min-width:90px}
+.track input[type=checkbox]{width:auto;margin:0;accent-color:var(--lime)}
+.track select{width:auto;margin:0;padding:6px}
+.track small{white-space:nowrap}
+.section{margin:22px 0 10px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+.metric{font-weight:750;color:var(--lime)}
+.selected{border-color:var(--lime)}
+progress{width:100%;accent-color:var(--lime)}
+.tabs{position:sticky;top:0;background:var(--bg);z-index:2;padding:8px 0}
+.muted strong{color:var(--ink)}
+.trackbuttons{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.footnote{font-size:13px;color:var(--muted)}
+@media(max-width:600px){
+.track{flex-wrap:wrap}
+.track .tracktitle{flex-basis:70%}
+.trackbuttons{margin-left:auto}
+.tabs{position:static}
+.number{font-size:22px}
+.row.wrap{flex-wrap:wrap}
+}
+a{color:var(--lime)}
+summary{cursor:pointer}
+details.card>summary{font-size:17px}
+.era-banner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0;color:var(--muted);font-size:14px}
+.era-swatch{width:16px;height:16px;border:1px solid var(--line);border-radius:50%;flex:none}
+body{transition:background-color .2s}
+.track small{white-space:normal;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+<div class="brand">liner notes<span> ✳</span></div>
+<div><span class="pill">A SONGWRITER'S LIFE</span> <button class="ghost" onclick="help()">How to play</button></div>
+</header>
+<div id="app">
+<div class="setup">
+<div class="intro">
+<div class="eyebrow">LINER NOTES 3.1 / ALBUM ROLLOUT &amp; REMIXES</div>
+<h1>Before the fame,<br>there was a song.</h1>
+<p class="big muted">Write the music. Live the story. Build your own eras.</p>
+</div>
+<div class="card grid">
+<div>
+<label>Stage name<input id="name" maxlength="35" placeholder="Your stage name"></label>
+<div class="grid">
+<label>Birth month<select id="birthMonth" onchange="birthdayPreview()">
+<option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option>
+</select></label>
+<label>Birth year<input type="number" id="birthYear" min="1929" max="2088" value="2010" oninput="birthdayPreview()"></label>
+<label>Starting year<input type="number" id="startYear" min="1960" max="2100" value="2026" oninput="birthdayPreview()"></label>
+</div>
+<p id="birthdayPreview" class="footnote">Your story begins in January 2026, aged 16. You age on your birthday month. Starting ages: 12–30.</p>
+<label>Your world<select id="worldMode" onchange="worldModeHint()">
+<option value="" disabled="" selected="">Choose your world</option>
+<option value="fictional">Fictional — original artists</option>
+<option value="realistic">Realistic — real artists, alternate history</option>
+</select></label>
+<p id="worldModeHint" class="footnote">Choose a world to see how its artists develop.</p>
+<label>Nationality<select id="nationality">
+<option value="">Unspecified</option>
+<option>United States</option><option>United Kingdom</option><option>Canada</option><option>Japan</option><option>South Korea</option><option>Australia</option><option>New Zealand</option><option>France</option><option>Germany</option><option>Ireland</option><option>Netherlands</option><option>Denmark</option><option>Spain</option><option>Italy</option><option>Portugal</option><option>Sweden</option><option>Norway</option><option>Finland</option><option>Belgium</option><option>Switzerland</option><option>Austria</option><option>Poland</option><option>Czechia</option><option>Hungary</option><option>Greece</option><option>Ukraine</option><option>Mexico</option><option>Brazil</option><option>Argentina</option><option>Colombia</option><option>Puerto Rico</option><option>Chile</option><option>Singapore</option><option>Malaysia</option><option>Indonesia</option><option>Philippines</option><option>Thailand</option><option>Vietnam</option><option>China</option><option>India</option><option>South Africa</option><option>Nigeria</option><option>Kenya</option><option>Ghana</option><option>Egypt</option><option>Morocco</option><option>Lebanon</option><option>Saudi Arabia</option><option>United Arab Emirates</option><option>Israel</option><option>Turkey</option><option>Other</option>
+</select></label>
+<p class="footnote">A small home-market advantage; your nationality never restricts genres or languages.</p>
+<label>Your first sound<select id="genre">
+<option>Pop</option><option>Pop-rock</option><option>Synth-pop</option><option>Dance-pop</option><option>Indie pop</option><option>Dream pop</option><option>Electropop</option><option>Country</option><option>Country-pop</option><option>Country rock</option><option>Americana</option><option>Folk</option><option>Indie folk</option><option>Alternative rock</option><option>Indie rock</option><option>Pop-punk</option><option>Soft rock</option><option>R&amp;B</option><option>Alternative R&amp;B</option><option>Soul</option><option>Hip-hop</option><option>Disco</option><option>Electronic</option><option>Acoustic</option><option>Jazz</option><option>Gothic Rock</option><option>Gothic Metal</option><option>Dark Pop</option><option>Darkwave</option><option>Symphonic Rock</option><option>Ethereal Wave</option><option>Piano Pop</option><option>Baroque Pop</option><option>Chamber Pop</option><option>J-Pop</option><option>J-Rock</option><option>K-Pop</option><option>Mandopop</option><option>Latin Pop</option><option>Reggaeton</option><option>Afrobeats</option><option>Amapiano</option><option>Indian Pop</option><option>Arabic Pop</option><option>Dubstep</option>
+</select></label>
+<label>Starting chapter<select id="origin">
+<option value="bedroom">Bedroom songwriter</option>
+<option value="stage">Local open-mic regular</option>
+<option value="online">Online cover artist (1995+)</option>
+</select></label>
+</div>
+<div>
+<h3>A blank page, on your terms.</h3>
+<p class="muted">Start as early as 12, develop your sound, then release singles, EPs and albums from 14. Blend genres, plan tours and submit your best work for awards.</p>
+<p class="muted">You begin with $2.5K in music savings. Living costs rise when you turn 18. An audience takes time to build.</p>
+<button class="primary" onclick="start()">Begin my story</button>
+<div class="actions"><button onclick="loadGame()">Load game</button></div>
+<small>Old saves supported · Fictional labels and award shows</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<dialog id="modal"></dialog>
+
+<script src="./app.js"></script>
+<script src="./career.js"></script>
+<script src="./awards-charts.js"></script>
+<script src="./touring.js"></script>
+<script src="./touring-plus.js"></script>
+<script src="./expansion.js"></script>
+<script src="./events-season.js"></script>
+<script src="./video-planner.js"></script>
+<script src="./fan-growth.js"></script>
+<script src="./releases.js"></script>
+<script src="./industry.js"></script>
+<script src="./industry-history.js"></script>
+<script src="./relationships.js"></script>
+<script src="./labels.js"></script>
+<script src="./education.js"></script>
+<script src="./celebrity-social.js"></script>
+<script src="./life-content.js"></script>
+<script src="./interview-additions.js"></script>
+<script src="./industry-rules.js"></script>
+<script src="./awards-plus.js"></script>
+<script src="./industry-social.js"></script>
+<script src="./industry-hub.js"></script>
+<script src="./media.js"></script>
+<script src="./media-expanded.js"></script>
+<script src="./discography-extras.js"></script>
+<script src="./tour-live.js"></script>
+<script src="./fan-creative.js"></script>
+<script src="./image-lifestyle.js"></script>
+<script src="./creative-team.js"></script>
+<script src="./eras-save.js"></script>
+<script src="./superstar.js"></script>
+<script src="./career-chapters.js"></script>
+<script src="./awards-night.js"></script>
+<script src="./career-memories.js"></script>
+<script src="./writing-career.js"></script>
+<script src="./musicians-world.js"></script>
+<script src="./world-studio.js"></script>
+<script src="./world-opportunities.js"></script>
+<script src="./rollout-remixes.js"></script>
+<script src="./online-presence.js"></script>
+<script src="./digital-distribution.js"></script>
+<script src="./formats.js"></script>
+<script src="./production.js"></script>
+<script src="./calendar.js"></script>
+<script src="./balance.js"></script>
+<script src="./sales-eras.js"></script>
+<script src="./ledger.js"></script>
+
+</body>
+</html>
